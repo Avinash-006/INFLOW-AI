@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* New Color Palette Variables */
+  --bg-color: #0A0A0A;
+  --card-color: #1A1A1A;
+  --accent-color: #FFFFFF;
+  --secondary-accent: #A1A1AA;
+
+  color-scheme: dark;
+  /* Enforcing dark mode as per request */
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--accent-color);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Markdown Styles */
+.prose {
+  color: var(--secondary-accent);
+}
+
+.prose strong,
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  color: var(--accent-color);
+}
+
+.prose p {
+  margin-bottom: 0.75em;
+}
+
+.prose pre {
+  background-color: var(--bg-color);
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.prose code {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+  font-family: monospace;
+  color: var(--accent-color);
+}
